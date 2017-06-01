@@ -32,6 +32,7 @@ class AptGet(dotbot.Plugin):
         if cleaned_packages['sources']:
             for source in cleaned_packages['sources']:
                 success &= self._add_ppa(source)
+        self._apt_cache._list.read_main_list()
         self._apt_cache.update()
         self._apt_cache.open()  # NB: utilize updated cache http://apt.alioth.debian.org/python-apt-doc/library/apt.cache.html#apt.cache.Cache.update
         for pkg_name, upgrade in cleaned_packages['packages'].items():
