@@ -1,5 +1,8 @@
 [dotbot_repo]: https://github.com/anishathalye/dotbot
 
+**This is a fork from original repository wich was located at
+https://github.com/dein0s/dotbot_plugin_aptget.git and is not available
+anymore.**
 
 # Dotbot ```apt-get``` Plugin
 
@@ -9,7 +12,7 @@ Plugin for [Dotbot][dotbot_repo], that adds ```aptget``` directive, which allows
 
 1. Simply add this repo as a submodule of your dotfiles repository:
 ```
-git submodule add https://github.com/dein0s/dotbot_plugin_aptget.git
+git submodule add https://github.com/alegsan/dotbot-aptget.git
 ```
 
 2. Pass this folder (or directly aptget.py file) path with corresponding flag to your [Dotbot][dotbot_repo] script:
@@ -57,6 +60,3 @@ git submodule add https://github.com/dein0s/dotbot_plugin_aptget.git
 ```bash
 "~/.dotfiles/bin/dotbot" -d "~/.dotfiles" -c "~/.dotfiles/packages.yaml" -p "~/.dotfiles/plugins/aptget.py"
 ```
-
-### Output
-![cli_out](http://i.imgur.com/7ytqeol.png)
